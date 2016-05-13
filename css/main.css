@@ -1,0 +1,390 @@
+/*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+@font-face{
+    font-family: vcr;
+    src: url('../fonts/VCR_OSD_MONO_1.001.ttf');
+}
+
+body {
+    font-family: 'vcr', serif;
+    overflow-x: hidden;
+    overflow-y: auto; 
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.1em;
+}
+
+h2 {
+   position: absolute;
+   font-size: 50px;
+   right: 50px;
+   top: -50px;
+   transform: skewX(10deg)skewY(8deg);
+   margin: 0px
+}
+h2 {
+    color: #375E97;
+}
+h2.step-one {
+    color: #FB6543;
+}
+h2.step-two {
+    color: #FFBB00;
+}
+
+h2::before{
+    position: absolute;
+    right: -4px;
+    top: -4px;
+    color: #FB6543;
+}
+h2.step-one::before{
+    color: #FFBB00;
+}
+h2.step-two::before{
+    color: #375E97;
+}
+ 
+h2::after{
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    color: #FFBB00;
+}
+h2.step-one::after{
+    color: #375E97;
+}
+h2.step-two::after{
+    color: #FB6543;
+}
+
+h3 {
+
+}
+a {
+    color: #000000;
+    text-decoration: underline;
+}
+
+a:hover {
+    background: #000000;
+    color: #ffffff;
+}
+
+p {
+    margin: 0px 0px 8px 0px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    margin-bottom: 30px;
+}
+/*NAVIGATION*/
+#navigation {
+    width: 40%;
+    display: inline-block;
+    float: left;
+    position: fixed;
+}
+
+.nav-wrap{
+    padding-left: 50px;
+    padding-top: 40px;
+}
+
+#navigation a {
+    margin: 0px 3px;
+}
+
+.filters {
+    margin: 10px auto;
+}
+
+
+
+/*CONTENT*/
+#content {
+    width: 60%;
+    display: inline-block;
+    float: right;
+}
+
+.content-wrap{
+    position: relative;
+}
+
+/*About Page*/
+.about {
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    opacity: 1;
+    transform: scale(1);
+    transition: all 0.6s;
+    width: 100%;
+}
+.about p {
+    /*width: 400px;*/
+    padding-right: 120px;
+}
+
+.about h2::before{
+    content: "ABOUT";
+}
+
+.about h2::after{
+    content: "ABOUT";
+}
+
+/*JOBS*/
+.jobs {
+    position: absolute;
+    top: 50px;
+    left: 50vw;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.6s;
+    width: 100%;
+}
+.jobs h2::before{
+    content: "JOBS";
+}
+
+.jobs h2::after{
+    content: "JOBS";
+}
+
+/*projects*/
+.projects {
+    position: absolute;
+    top: 50px;
+    left: 50vw;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.6s;
+    width: 100%;
+}
+.projects h2::before{
+    content: "PROJECTS";
+}
+
+.projects h2::after{
+    content: "PROJECTS";
+}
+
+/*schools*/
+.schools {
+    position: absolute;
+    top: 50px;
+    left: 50vw;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.6s;
+    width: 100%;
+}
+.schools h2::before{
+    content: "SCHOOLS";
+}
+
+.schools h2::after{
+    content: "SCHOOLS";
+}
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (max-width: 850px) {
+    
+    h2 {
+        font-size: 25px; 
+        right: 80px;
+    }
+    
+    #navigation{
+        width: 100%;
+        position: absolute;
+    }
+    #content {
+        width: 100%;
+    }
+    .content-wrap{
+        top: 150px;
+        left: 50px;
+    }
+
+    .about p {
+        padding-right: 100px; 
+    }
+    /* Style adjustments for viewports that meet the condition */
+}
