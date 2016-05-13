@@ -106,6 +106,7 @@ h2 {
    right: 50px;
    top: -50px;
    transform: skewX(10deg)skewY(8deg);
+   -webkit-transform: skewX(10deg)skewY(8deg);
    margin: 0px
 }
 h2 {
@@ -365,7 +366,12 @@ li {
    ========================================================================== */
 
 @media only screen and (max-width: 850px) {
-    
+   html,body{
+        height: 100%;
+        overflow-x: hidden;
+        width: 100%;
+        position: fixed;
+   } 
     h2 {
         font-size: 25px; 
         right: 80px;
@@ -375,12 +381,16 @@ li {
         width: 100%;
         position: absolute;
     }
+    .nav-wrap {
+        padding-left: 30px;
+    }
     #content {
         width: 100%;
     }
     .content-wrap{
         top: 150px;
-        left: 50px;
+        left: 30px;
+
     }
 
     .about p {
